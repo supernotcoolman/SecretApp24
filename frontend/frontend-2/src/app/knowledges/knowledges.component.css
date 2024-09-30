@@ -1,0 +1,126 @@
+* {
+  font-family: Beirut, Serif;
+}
+
+.parent {
+  position: relative;
+  top: 38px;
+  border-radius: 5px;
+  margin: 0 10px 50px 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(119, 76, 43, 0.7);
+}
+
+h2 {
+  font-family: Beirut, Serif;
+  text-shadow: 4px 4px 5px #774c2b;
+  color: white;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+}
+
+.breakpoint {
+  flex-basis: 100%;
+}
+
+.knowledgeList{
+  width: 100%;
+  max-height: 500px;
+  overflow: auto;
+  border: solid 7px antiquewhite;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(206,171,140,0.4);
+}
+
+.card {
+  margin: 8px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 3px solid lightgray;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.content {
+  padding: 10px;
+}
+
+.addKnowledge {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  background-color: rgba(240,220,149,0.5);
+}
+
+.formField {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.formField > button {
+  font-family: Beirut, serif;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(214, 180, 107);
+}
+
+.addContent {
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.deletor {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.edytor {
+  cursor: pointer;
+  position: absolute;
+  right: 60px;
+  bottom: 10px;
+}
+
+.return {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.return > button {
+  font-family: Beirut, serif;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(214, 180, 107);
+}
+
+.parent + .breakpoint{
+  padding-top: 20px
+}
+

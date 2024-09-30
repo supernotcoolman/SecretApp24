@@ -1,0 +1,62 @@
+<div class="parent1">
+
+  <div class="showAll">
+    <button mat-flat-button routerLink="/knowledges">Pokaż wszystkie wpisy</button>
+  </div>
+  <div class="searchFor">
+    <mat-form-field class = "srch">
+      <input matInput placeholder="Wyszukaj po kluczu..." [(ngModel)]="term">
+    </mat-form-field>
+    <button mat-flat-button (click)="search()">Szukaj</button>
+  </div>
+
+<!--  -->
+  <div class="searchSegment"*ngIf="searchedKnowledges.length > 0 && term">
+    <div class="kResult" *ngFor="let knowledge of searchedKnowledges; let i = index">
+      <mat-card (click) = "toggleCollapse(i)">
+        <h3>{{ knowledge.title }}</h3>
+        <div class = "content" *ngIf="!isCollapsed[i]">
+          <p><strong>Autor:</strong> {{ knowledge.author }}</p>
+          <p><strong>Treść:</strong> {{ knowledge.content }}</p>
+          <p><strong>Data utworzenia:</strong> {{ knowledge.createdDate | date }}</p>
+          <p><strong>Data modyfikacji:</strong> {{ knowledge.lastModifiedDate | date }}</p>
+          <button type="button" class = "deletor" (click)="deleteKnowledge(knowledge.id)">Usuń</button>
+          <button type="button" class="edytor" (click)="openEditDialog(knowledge)">Edytuj</button>
+        </div>
+      </mat-card>
+      <div class="breakpoint"></div>
+    </div>
+  </div>
+
+  <div class="nf" *ngIf="searchedKnowledges.length == 0 && term">
+    <p>Nie znaleziono żadnej zawartości.</p>
+  </div>
+
+  <div class="addKnowledge">
+    <br>
+    <h2>Dodaj treść</h2>
+    <form (ngSubmit)="addKnowledge()" >
+      <div class="formField">
+        <label for="title">Tytuł: </label>
+        <input id="title" [(ngModel)]="newKnowledge.title" name="title">
+      </div>
+      <div class="formField">
+        <label for="author">Autor: </label>
+        <input id="author" [(ngModel)]="newKnowledge.author" name="author">
+      </div>
+      <div class="formField">
+        <label class="addContent" for="content">Treść:</label>
+        <textarea id="content" [(ngModel)]="newKnowledge.content" name="content"></textarea>
+      </div>
+      <div class="formField">
+      <button mat-raised-button>Dodaj</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+<div class="breakpoint"></div>
+
+
+
+

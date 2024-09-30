@@ -1,0 +1,50 @@
+<div class="return">
+  <button mat-flat-button routerLink="/home">Strona domowa</button>
+</div>
+
+<div class = "parent">
+
+  <h2>Lista Wiedzy Tajemnej</h2>
+  <div class="breakpoint"></div>
+  <div class="knowledgeList">
+    <div class="card" *ngFor="let knowledge of knowledges; let i = index">
+      <mat-card (click) = "toggleCollapse(i)">
+        <h3>{{ knowledge.title }}</h3>
+        <div class="content" *ngIf="!isCollapsed[i]">
+          <p><strong>Autor:</strong> {{ knowledge.author }}</p>
+          <p><strong>Treść:</strong> {{ knowledge.content }}</p>
+          <p><strong>Data utworzenia:</strong> {{ knowledge.createdDate | date }}</p>
+          <p><strong>Data modyfikacji:</strong> {{ knowledge.lastModifiedDate | date }}</p>
+          <button type="button" class = "deletor" (click)="deleteKnowledge(knowledge.id)">Usuń</button>
+          <button type="button" class="edytor" (click)="openEditDialog(knowledge)">Edytuj</button>
+        </div>
+      </mat-card>
+      <div class="breakpoint"></div>
+    </div>
+  </div>
+  <div class="breakpoint"></div>
+  <div class="addKnowledge">
+    <br><br><br>
+    <h2>Dodaj treść</h2>
+    <form (ngSubmit)="addKnowledge()" >
+      <div class="formField">
+        <label for="title">Tytuł: </label>
+        <input id="title" [(ngModel)]="newKnowledge.title" name="title">
+      </div>
+      <div class="formField">
+        <label for="author">Autor: </label>
+        <input id="author" [(ngModel)]="newKnowledge.author" name="author">
+      </div>
+      <div class="formField">
+        <label class="addContent" for="content">Treść:</label>
+        <textarea id="content" [(ngModel)]="newKnowledge.content" name="content"></textarea>
+      </div>
+      <div class="formField">
+        <button mat-raised-button>Dodaj</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+<div class="breakpoint"></div>

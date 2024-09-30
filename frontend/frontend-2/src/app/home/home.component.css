@@ -1,0 +1,153 @@
+* {
+  font-family: Beirut, serif;
+}
+
+.parent1 {
+  position: relative;
+  top: 38px;
+  border-radius: 5px;
+  margin: 0 10px 20px 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(119, 76, 43, 0.7);
+}
+
+.showAll, .searchFor {
+  flex: 1;
+  max-width: 50%;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.showAll > button {
+  width: 400px;
+  height: 60px;
+  font-family: Beirut, serif;
+  font-size: 26px;
+  background-color: rgb(214, 180, 107);
+}
+
+.searchFor > button {
+  font-size: 22px;
+  font-family: Beirut, serif;
+  background-color: rgb(214, 180, 107);
+}
+
+.searchFor > .srch {
+  margin-top: 20px;
+  margin-right: 10px;
+  font-family: Beirut, serif;
+  width: 250px;
+}
+
+.nf {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.searchSegment {
+  max-height: 400px;
+  flex-basis: 100%;
+  overflow: auto;
+  border: solid 7px antiquewhite;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(206,171,140,0.4);
+}
+
+.breakpoint {
+  flex-basis: 100%;
+}
+
+.kResult {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  margin: 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kResult h3 {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 3px solid lightgray;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.kResult p {
+  margin: 4px 0;
+}
+
+.content {
+  padding: 10px;
+}
+
+
+h2 {
+  font-family: Beirut, serif;
+  color: white;
+  text-shadow: 4px 4px 5px #774c2b;
+}
+.addKnowledge {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  background-color: rgba(240,220,149,0.5);
+}
+
+.formField {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.formField > button {
+  font-family: Beirut, serif;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(214, 180, 107);
+}
+
+.addContent {
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.deletor {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.edytor {
+  cursor: pointer;
+  position: absolute;
+  right: 60px;
+  bottom: 10px;
+}
+
+

@@ -1,0 +1,35 @@
+div {
+  padding-top: 20px;
+}
+
+h6, h1 {
+  font-family: Garamond;
+  color: white;
+  text-shadow: 4px 4px 5px #773e34;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+mat-card {
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+mat-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
